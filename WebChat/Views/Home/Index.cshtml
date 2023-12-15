@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@section Scripts{
+    <script src="~/lib/microsoft-signalr/signalr.min.js"></script>
+    <script src="~/js/chat.js" asp-append-version="true"></script>
+
+}
+
+<div class="container py-3">
+    <div class="row bg-white-80">
+        @* danh sách bạn bè*@
+
+        <div class="col-md-3">
+            <ul class="list-group list-group-flush">
+                @for (int i = 0; i < 5; i++)
+                {
+                    <li class="d-flex list-group-item list-group-flush justify-content-between">
+                        <div class="d-flex">
+                            <img src="~/img/user_icon.png" class="friend-icon rounded rounded-circle" />
+                            <h5 class="ps-2 flex-grow-1">
+                                <span class="friend-status"></span>
+                                Tên bạn bè
+                                <i class="bi bi-chat"></i>
+                            </h5>
+                        </div>
+                        <div class="dropdown float-end">
+                            <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-three-dots"></i>
+                            </button>
+                            <ul class="dropdown-menu my-3">
+                                <li><a class="dropdown-item" href="#">Xóa cuộc trò chuyện</a></li>
+                                <li><a class="dropdown-item text-danger" href="#">Rời khỏi cuộc trò chuyện</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+
+
+        @*  khung chat*@
+        <div class="col-md-9" id="messagesList">
+            @* nội dung trao đổi*@
+            <div class="conversation">
+             @*   <div class="row">
+                    <div class="col-8">
+                        <div class="bg-light d-inline-block border border-secondary p-2 rounded rounded-5"> here </div>
+                    </div>
+                    <div class="col-4">
+                    </div>
+                </div>*@
+                <div class="message-box">
+                    <div class="message"> Here! I'm here Here! I'm here Here! I'm here Here! I'm here Here! I'm hereHere! I'm hereHere! I'm here</div>
+                    <div class="message-time">2023/12/11 20:09</div>
+                </div>
+                <div class="message-box from-me">
+                    <div class="message"> Here! I'm here</div>
+                    <div class="message-time">2023/12/11 20:09</div>
+                </div>
+                <hr class="be"/>
+            </div>
+           
+            @*khu vực nhập tin nhắn*@
+            <div class="input-group my-3">
+                <textarea class="form-control" id="mesg" rows="3"></textarea>
+                <button class="btn btn-primary btn-lg" onclick="sendMessage()">
+                    <i class="bi bi-send  fs-3"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@*https://icon-icons.com/    nguồn icon*@
