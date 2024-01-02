@@ -1,0 +1,93 @@
+﻿
+:root{
+    --bs-border-radius: 1rem !important;
+    --bs-border-radius-sm: 1rem !important;
+}
+.container{
+    padding-top: 10px;
+    background-color: aliceblue;
+}
+
+/* url = > beauty gradien*/
+.bg-main{
+    background: #005AA7;
+    background: linear-gradient(210deg, #005AA7,#FFFDE4);
+    background: -webkit-linear-gradient(210deg, #005AA7,#FFFDE4);
+}
+
+.friend-icon{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.friend-status{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: #dbdbdb;
+    border-radius: 50%;
+}
+
+.online{
+    background: green !important;
+}
+
+/*.form-control{
+    border-radius: var(--bs-border-radius-);
+}*/
+
+/*.bg-white-80{
+    background-color
+}*/
+
+.conversation{
+    height : calc(100vh - 150px);
+    min-height: 400px;
+}
+.message-box{
+    display: flex;
+    margin: 0.5rem;
+}
+.message-box >.message{
+    border: 1px solid #ebefef;
+    padding: 0.25rem;
+    max-height: 70%;
+    border-radius: 1rem;
+}
+.message-box > .message-time{
+    color: #808080;
+    font-size: small;
+    display: flex;
+    align-items:center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    /*ẩn tg*/
+    opacity:0;
+    transition: opacity 0.5s;
+}
+.message-box.from-me{
+    flex-direction:row-reverse;
+}
+.message-box.from-me > .message{
+    border: 1px solid #dbdbdb;
+    background: #94b7bd;
+    color: white;
+}
+/*hiện tg khi hover*/
+.message-box:hover > .message-time{
+    opacity: 1;
+}
+
+
+
+
+
+.be{
+    margin-top: 200px;
+    width: 25%;
+}
+
+
+

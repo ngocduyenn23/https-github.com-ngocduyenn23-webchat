@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootstrap@5.3.2",
+      "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "library": "alpinejs@3.13.2",
+      "destination": "wwwroot/lib/alpinejs/"
+    },
+    {
+      "library": "bootstrap-icons@1.11.1",
+      "destination": "wwwroot/lib/bootstrap-icons/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "microsoft-signalr@7.0.12",
+      "destination": "wwwroot/lib/microsoft-signalr/"
+    }
+  ]
+}
